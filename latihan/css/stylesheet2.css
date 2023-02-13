@@ -1,0 +1,256 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -----Common----- */
+body {
+  background-color: #7ed6df;
+  width: 100%;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  transition: all 0.3s ease-in;
+}
+.top{
+  margin:0;
+  font-family: Helvetica, sans-serif;
+  background-color: #7ed6df;
+}
+.top .header .logo span{
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: #7ed6df;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #7ed6df;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 340px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+/* about content style */
+.about{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .main img{
+  width: 580px;
+  max-width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+.all-text{
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+.main{
+  width: 1290px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.all-text h4{
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.all-text h1{
+  font-size: 65px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.all-text p{
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+.btn button{
+  background: #fff;
+  padding: 20px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+.btn button:hover{
+  background-color: black;
+  color: #fff;
+  transition: .3s;
+  cursor: pointer;
+}
+.btn .btn2{
+  background-color: #000;
+  color: #fff;
+}
+.btn .btn2:hover{
+  color: #000;
+  background: #fff;
+  transition: .3s;
+}
+@media screen and (max-width: 1250px){
+  .about{
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+  }
+  .all-text{
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 450px){
+  .about .main img{
+    margin-bottom: 35px;
+  }
+  .all-text h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+}
